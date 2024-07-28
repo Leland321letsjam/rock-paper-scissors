@@ -42,16 +42,22 @@ function getHumanChoice() {
 function playRound(computerChoice, humanChoice) {
     if (computerChoice === 0 && humanChoice === 'paper') {
         console.log('You win this round!');
+        humanScore++;
     } else if (computerChoice === 0 && humanChoice === 'scissors') {
         console.log('You lose this round!');
+        computerScore++;
     } else if (computerChoice === 1 && humanChoice === 'scissors') {
         console.log('You win this round!');
+        humanScore++;
     } else if (computerChoice === 1 && humanChoice === 'rock') {
         console.log('You lose this round!');
+        computerScore++;
     } else if (computerChoice === 2 && humanChoice === 'rock') {
         console.log('You win this round!');
+        humanScore++;
     } else if (computerChoice === 2 && humanChoice === 'paper') {
         console.log('You lose this round!');
+        computerScore++;
     } else {
         console.log('Tie!');
     } 
@@ -65,11 +71,6 @@ playRound(computerSelection, humanSelection);
 
 
 //function playGame();
-
-
-//alert(getHumanChoice());
-//console.log(getHumanChoice());
-//console.log(playRound());
 
 
 
