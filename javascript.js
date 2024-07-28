@@ -8,7 +8,7 @@ let computerChoice;
 
 
 function getComputerChoice() {
-    let computerChoice = Math.floor(Math.random() * 3)
+    computerChoice = Math.floor(Math.random() * 3)
     switch (computerChoice) {
         case 0:
             console.log('Computer: Rock');
@@ -20,7 +20,7 @@ function getComputerChoice() {
             console.log('Computer: Scissors');
             break;
     }
-    return(computerChoice);
+    return computerChoice;
 }
 
 
@@ -29,19 +29,33 @@ function getHumanChoice() {
     console.log('You: ' + humanChoice);
     humanChoice = humanChoice.toLowerCase();
     return humanChoice;
-    
 }
 
 
 
+function playRound(computerChoice, humanChoice) {
+    if (computerChoice === 0 && humanChoice === 'paper') {
+        console.log('You win this round!');
+    } else if (computerChoice === 0 && humanChoice === 'scissors') {
+        console.log('You lose this round!');
+    } else if (computerChoice === 1 && humanChoice === 'scissors') {
+        console.log('You win this round!');
+    } else if (computerChoice === 1 && humanChoice === 'rock') {
+        console.log('You lose this round!');
+    } else if (computerChoice === 2 && humanChoice === 'rock') {
+        console.log('You win this round!');
+    } else if (computerChoice === 2 && humanChoice === 'paper') {
+        console.log('You lose this round!');
+    } else {
+        console.log('Tie!');
+    } 
+}
 
+/* const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
 
-/*if (computerChoice === 0 && humanChoice === 'rock') {
-    alert('Tie!');
-}*/
+playRound(computerSelection, humanSelection); */
 
-
-//function playRound();
 
 
 //function playGame();
@@ -49,7 +63,7 @@ function getHumanChoice() {
 
 //alert(getHumanChoice());
 //console.log(getHumanChoice());
-//console.log(humanChoice);
+//console.log(playRound());
 
 
 
