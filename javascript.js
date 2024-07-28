@@ -3,13 +3,13 @@ let humanScore = 0;
 let computerScore = 0;
 
 let humanChoice;
-let computerResponse;
+let computerChoice;
 
 
 
 function getComputerChoice() {
-    let computerResponse = Math.floor(Math.random() * 3)
-    switch (computerResponse) {
+    let computerChoice = Math.floor(Math.random() * 3)
+    switch (computerChoice) {
         case 0:
             console.log('Computer: Rock');
             break;
@@ -20,11 +20,11 @@ function getComputerChoice() {
             console.log('Computer: Scissors');
             break;
     }
-    return(computerResponse);
+    return(computerChoice);
 }
 
 
-
+//if (computerChoice === 0 && humanChoice)
 
 
 /*function getHumanChoice() {
