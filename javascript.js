@@ -2,19 +2,48 @@
 let humanScore = 0;
 let computerScore = 0;
 
+let humanChoice;
+let computerResponse;
+
+
+
+function getComputerChoice() {
+    let computerResponse = Math.floor(Math.random() * 3)
+    switch (computerResponse) {
+        case 0:
+            console.log('Computer: Rock');
+            break;
+        case 1:
+            console.log('Computer: Paper');
+            break;
+        case 2:
+            console.log('Computer: Scissors');
+            break;
+    }
+    return(computerResponse);
+}
 
 
 
 
-function getComputerChoice();
+
+/*function getHumanChoice() {
+    humanChoice = prompt('Choose Rock, Paper, or Scissors');
+    console.log('You: ' + humanChoice);
+    return humanChoice;
+    
+}
 
 
-function getHumanChoice();
+//function playRound();
 
 
-function playRound();
+//function playGame();
 
 
+
+//console.log(getHumanChoice());
+//console.log(humanChoice.toLowerCase);
 
 
 
@@ -33,18 +62,7 @@ print you win or lose or tie message to console
 if winner increment score
 
 run game again until
-first to score 3 "you win the game"
+best of 5 rounds "you win the game"
 
 
 */
-
-
-
-
-
-
-
-
-
-
-//console.log();//
