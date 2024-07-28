@@ -1,6 +1,7 @@
 
 let humanScore = 0;
 let computerScore = 0;
+let round = 0;
 
 let humanChoice;
 let computerChoice;
@@ -29,8 +30,7 @@ function getHumanChoice() {
         humanChoice = prompt('Choose Rock, Paper, or Scissors');
     } while (humanChoice.toLowerCase() != 'rock'
       && humanChoice.toLowerCase() != 'paper'
-      && humanChoice.toLowerCase() != 'scissors') {
-    } 
+      && humanChoice.toLowerCase() != 'scissors')
     console.log('You: ' + humanChoice);
     humanChoice = humanChoice.toLowerCase();
     return humanChoice;
@@ -61,35 +61,24 @@ function playRound(computerChoice, humanChoice) {
     } else {
         console.log('Tie!');
     } 
+    round++;
 }
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
 
-playRound(computerSelection, humanSelection);
+function playGame() {
+        do {
+            let humanSelection = getHumanChoice();
+            let computerSelection = getComputerChoice();
+            playRound(computerSelection, humanSelection);
+        } while (round < 5);
 
+        if (humanScore > computerScore) {
+            console.log('You won the game!');
+        } else if (humanScore < computerScore) {
+            console.log('You lost the game!'); 
+        } else {
+            console.log("It's a tie!");
+        }
+}
 
-
-//function playGame();
-
-
-
-
-
-/*
-rock paper scissors played in the console
-ask human player for input of rock OR paper OR scissors
-print human input to console
-generate random choice for computer of rock OR paper OR scissors
-only accept valid input, ask again if input is invalid (remove case sensitivity)
-print pc "choice" to console
-compare human choice to pc choice
-determine which one wins, or tie
-print you win or lose or tie message to console
-if winner increment score
-
-run game again until
-best of 5 rounds "you win the game"
-
-
-*/
+playGame();
