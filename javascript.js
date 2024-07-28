@@ -24,15 +24,21 @@ function getComputerChoice() {
 }
 
 
-//if (computerChoice === 0 && humanChoice)
-
-
-/*function getHumanChoice() {
+function getHumanChoice() {
     humanChoice = prompt('Choose Rock, Paper, or Scissors');
     console.log('You: ' + humanChoice);
+    humanChoice = humanChoice.toLowerCase();
     return humanChoice;
     
 }
+
+
+
+
+
+/*if (computerChoice === 0 && humanChoice === 'rock') {
+    alert('Tie!');
+}*/
 
 
 //function playRound();
@@ -41,9 +47,9 @@ function getComputerChoice() {
 //function playGame();
 
 
-
+//alert(getHumanChoice());
 //console.log(getHumanChoice());
-//console.log(humanChoice.toLowerCase);
+//console.log(humanChoice);
 
 
 
