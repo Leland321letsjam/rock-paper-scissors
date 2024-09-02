@@ -21,18 +21,6 @@ function getComputerChoice() {
 }
 
 
-// function getHumanChoice() {
-//     do {
-//         humanChoice = prompt('Choose Rock, Paper, or Scissors');
-//     } while (humanChoice.toLowerCase() != 'rock'
-//       && humanChoice.toLowerCase() != 'paper'
-//       && humanChoice.toLowerCase() != 'scissors')
-//     console.log('You: ' + humanChoice);
-//     humanChoice = humanChoice.toLowerCase();
-//     return humanChoice;
-    
-// }
-
 
 
 function playRound(computerChoice, humanChoice) {
