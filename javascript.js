@@ -8,13 +8,13 @@ function getComputerChoice() {
     computerChoice = Math.floor(Math.random() * 3)
     switch (computerChoice) {
         case 0:
-            console.log('Computer: Rock');
+            console.log('Rock');
             break;
         case 1:
-            console.log('Computer: Paper');
+            console.log('Paper');
             break;
         case 2:
-            console.log('Computer: Scissors');
+            console.log('Scissors');
             break;
     }
     return computerChoice;
@@ -24,22 +24,16 @@ function getComputerChoice() {
 
 
 function playRound(computerChoice, humanChoice) {
-    if (computerChoice === 0 && humanChoice === 'paper') {  //These can probably be combined into three, win, lose, tie
+    if (computerChoice === 0 && humanChoice === 'paper' 
+        || computerChoice === 1 && humanChoice === 'scissors'
+        || computerChoice === 2 && humanChoice === 'rock'
+        ) {
         console.log('You win this round!');
         return 'human';
-    } else if (computerChoice === 0 && humanChoice === 'scissors') {
-        console.log('You lose this round!');
-        return 'computer';
-    } else if (computerChoice === 1 && humanChoice === 'scissors') {
-        console.log('You win this round!');
-        return 'human';
-    } else if (computerChoice === 1 && humanChoice === 'rock') {
-        console.log('You lose this round!');
-        return 'computer';
-    } else if (computerChoice === 2 && humanChoice === 'rock') {
-        console.log('You win this round!');
-        return 'human';
-    } else if (computerChoice === 2 && humanChoice === 'paper') {
+    } else if (computerChoice === 0 && humanChoice === 'scissors'
+        || computerChoice === 1 && humanChoice === 'rock'
+        || computerChoice === 2 && humanChoice === 'paper'
+        ) {
         console.log('You lose this round!');
         return 'computer';
     } else {
