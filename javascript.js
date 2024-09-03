@@ -6,20 +6,27 @@ let computerChoice;
 
 function getComputerChoice() {
     computerChoice = Math.floor(Math.random() * 3)
-    switch (computerChoice) {
-        case 0:
-            console.log('Rock');
-            break;
-        case 1:
-            console.log('Paper');
-            break;
-        case 2:
-            console.log('Scissors');
-            break;
-    }
+    displayComputerChoice(computerChoice);
     return computerChoice;
 }
 
+function displayComputerChoice () {
+    const computerSelection = document.querySelector('.computer-selection');
+    const computerSelectionResult = document.createElement('span');
+    computerSelectionResult.className = 'display-computer-selection'
+    switch (computerChoice) {
+        case 0:
+            computerSelectionResult.textContent = 'Rock';
+            break;
+        case 1:
+            computerSelectionResult.textContent = 'Paper';
+            break;
+        case 2:
+            computerSelectionResult.textContent = 'Scissors';
+            break;
+    }
+    computerSelection.appendChild(computerSelectionResult);
+}
 
 
 
@@ -77,20 +84,36 @@ const buttonScissors = document.querySelector('#scissors');
 
 buttonRock.addEventListener('click', () => {
     let humanChoice = 'rock';
+    let x = document.querySelector('.display-computer-selection');
+    if (x) {
+        x.remove();
+    }
     getComputerChoice();
     playRound(computerChoice, humanChoice);
-})
+});
 
 buttonPaper.addEventListener('click', () => {
     let humanChoice = 'paper';
+    let x = document.querySelector('.display-computer-selection');
+    if (x) {
+        x.remove();
+    }
     getComputerChoice();
     playRound(computerChoice, humanChoice);
-})
+});
 
 buttonScissors.addEventListener('click', () => {
     let humanChoice = 'scissors';
+    let x = document.querySelector('.display-computer-selection');
+    if (x) {
+        x.remove();
+    }
     getComputerChoice();
     playRound(computerChoice, humanChoice);
-})
+});
+
+
+
+
 
 //playGame();
