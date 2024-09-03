@@ -8,7 +8,7 @@ function getComputerChoice() {
     computerChoice = Math.floor(Math.random() * 3)
     displayComputerChoice(computerChoice);
     return computerChoice;
-}
+};
 
 function displayComputerChoice () {
     const computerSelection = document.querySelector('.computer-selection');
@@ -26,8 +26,12 @@ function displayComputerChoice () {
             break;
     }
     computerSelection.appendChild(computerSelectionResult);
-}
+};
 
+function displayPlayerChoice(humanChoice) {
+    const yourSelection = document.querySelector('.your-selection');
+    yourSelection.textContent = `Your selection: ${humanChoice.charAt(0).toUpperCase() + humanChoice.slice(1)}`;
+};
 
 
 function playRound(computerChoice, humanChoice) {
@@ -46,7 +50,7 @@ function playRound(computerChoice, humanChoice) {
     } else {
         console.log('Tie!');
     } 
-}
+};
 
 
 // function playGame() {
