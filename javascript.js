@@ -48,13 +48,13 @@ function playRound(computerChoice, humanChoice) {
         || computerChoice === 1 && humanChoice === 'rock'
         || computerChoice === 2 && humanChoice === 'paper'
         ) {
-            const divContainerOne = document.querySelector('.container1'); //Should create a new function for this but I'm being lazy
+            const divContainerOne = document.querySelector('.container1'); 
             const displayRoundResult = document.createElement('h3');
             displayRoundResult.textContent = 'You lose this round!';
             divContainerOne.appendChild(displayRoundResult);
             return 'computer';
     } else {
-            const divContainerOne = document.querySelector('.container1'); //Should create a new function for this but I'm being lazy
+            const divContainerOne = document.querySelector('.container1'); 
             const displayRoundResult = document.createElement('h3');
             displayRoundResult.textContent = 'Tie!';
             divContainerOne.appendChild(displayRoundResult);
