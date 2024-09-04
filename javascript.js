@@ -39,16 +39,25 @@ function playRound(computerChoice, humanChoice) {
         || computerChoice === 1 && humanChoice === 'scissors'
         || computerChoice === 2 && humanChoice === 'rock'
         ) {
-        console.log('You win this round!');
-        return 'human';
+            const divContainerOne = document.querySelector('.container1'); //Should create a new function for this but I'm being lazy
+            const displayRoundResult = document.createElement('h3');
+            displayRoundResult.textContent = 'You win this round!';
+            divContainerOne.appendChild(displayRoundResult);
+            return 'human';
     } else if (computerChoice === 0 && humanChoice === 'scissors'
         || computerChoice === 1 && humanChoice === 'rock'
         || computerChoice === 2 && humanChoice === 'paper'
         ) {
-        console.log('You lose this round!');
-        return 'computer';
+            const divContainerOne = document.querySelector('.container1'); //Should create a new function for this but I'm being lazy
+            const displayRoundResult = document.createElement('h3');
+            displayRoundResult.textContent = 'You lose this round!';
+            divContainerOne.appendChild(displayRoundResult);
+            return 'computer';
     } else {
-        console.log('Tie!');
+            const divContainerOne = document.querySelector('.container1'); //Should create a new function for this but I'm being lazy
+            const displayRoundResult = document.createElement('h3');
+            displayRoundResult.textContent = 'Tie!';
+            divContainerOne.appendChild(displayRoundResult);
     } 
 };
 
@@ -92,7 +101,12 @@ buttonRock.addEventListener('click', () => {
     if (x) {
         x.remove();
     }
+    let y = document.querySelector('h3');
+    if (y) {
+        y.remove();
+    }
     getComputerChoice();
+    displayPlayerChoice(humanChoice);
     playRound(computerChoice, humanChoice);
 });
 
@@ -102,7 +116,12 @@ buttonPaper.addEventListener('click', () => {
     if (x) {
         x.remove();
     }
+    let y = document.querySelector('h3');
+    if (y) {
+        y.remove();
+    }
     getComputerChoice();
+    displayPlayerChoice(humanChoice);
     playRound(computerChoice, humanChoice);
 });
 
@@ -112,7 +131,12 @@ buttonScissors.addEventListener('click', () => {
     if (x) {
         x.remove();
     }
+    let y = document.querySelector('h3');
+    if (y) {
+        y.remove();
+    }
     getComputerChoice();
+    displayPlayerChoice(humanChoice);
     playRound(computerChoice, humanChoice);
 });
 
